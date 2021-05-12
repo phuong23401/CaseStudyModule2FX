@@ -4,14 +4,20 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import model.Book;
 import model.Manager;
 import model.ManagerList;
@@ -19,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.net.URL;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -84,7 +91,7 @@ public class MenuManager implements Initializable {
     private Button writeFileButton;
 
     @FXML
-    private Button exitButton;
+    private Button logoutButton;
 
     @FXML
     private Button showManagerBtn;
@@ -304,10 +311,6 @@ public class MenuManager implements Initializable {
         }
     }
 
-    public void exit() {
-        System.exit(0);
-    }
-
     private void showAlertInfo(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("QUẢN LÝ THƯ VIỆN");
@@ -327,6 +330,20 @@ public class MenuManager implements Initializable {
     public void showManager() {
         for (Manager manager : ManagerList.getMANAGER_LIST()) {
             System.out.println(manager);
+        }
+    }
+
+    public void logout(@NotNull ActionEvent event) {
+        try {
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
+            Stage stage = new Stage();
+            stage.setTitle("CHƯƠNG TRÌNH QUẢN LÝ SÁCH");
+            stage.setScene(new Scene(root, 600, 500));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

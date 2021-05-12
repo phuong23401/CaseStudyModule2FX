@@ -11,15 +11,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
-            prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.SignUp">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUp">
     <left>
         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
                 <ImageView fx:id="image2" fitHeight="500.0" fitWidth="200.0" opacity="0.85" smooth="false">
                     <image>
-                        <Image url="@../../image/img-login.jpg"/>
+                        <Image url="@../../image/img-login.jpg" />
                     </image>
                 </ImageView>
             </children>
@@ -30,54 +28,50 @@
             <children>
                 <Label layoutX="82.0" layoutY="42.0" text="ĐĂNG KÍ THÀNH VIÊN" textFill="#0080ff">
                     <font>
-                        <Font name="System Bold" size="22.0"/>
+                        <Font name="System Bold" size="22.0" />
                     </font>
                 </Label>
                 <Label layoutX="108.0" layoutY="110.0" text="Email :">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Label>
                 <Label layoutX="54.0" layoutY="165.0" text="Số điện thoại :">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Label>
                 <Label layoutX="42.0" layoutY="220.0" text="Tên đăng nhập :">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Label>
                 <Label layoutX="82.0" layoutY="275.0" text="Mật khẩu :">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Label>
                 <Label layoutX="20.0" layoutY="330.0" text="Nhập lại mật khẩu :">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Label>
-                <TextField fx:id="emailField" layoutX="170.0" layoutY="110.0" prefWidth="200.0"
-                           promptText="VD : abc123@gmail.com"/>
-                <TextField fx:id="phoneField" layoutX="170.0" layoutY="165.0" prefWidth="200.0"
-                           promptText="VD : 0367988123"/>
-                <TextField fx:id="userNameField" layoutX="170.0" layoutY="220.0" prefWidth="200.0"/>
-                <Button fx:id="registrationBtn" layoutX="155.0" layoutY="400.0" mnemonicParsing="false"
-                        onAction="#signUp" text="ĐĂNG KÝ" textFill="#0080ff">
+                <TextField fx:id="emailField" layoutX="170.0" layoutY="110.0" prefWidth="200.0" promptText="VD : abc123@gmail.com" />
+                <TextField fx:id="phoneField" layoutX="170.0" layoutY="165.0" prefWidth="200.0" promptText="VD : 0367988123" />
+                <TextField fx:id="userNameField" layoutX="170.0" layoutY="220.0" prefWidth="200.0" />
+                <Button fx:id="registrationBtn" layoutX="155.0" layoutY="400.0" mnemonicParsing="false" onAction="#signUp" text="ĐĂNG KÝ" textFill="#0080ff">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Label fx:id="emailMessage" layoutX="170.0" layoutY="135.0" prefWidth="200.0" textFill="RED"/>
-                <Label fx:id="phoneMessage" layoutX="170.0" layoutY="190.0" prefWidth="200.0" textFill="RED"/>
-                <Label fx:id="userNameMessage" layoutX="170.0" layoutY="245.0" prefWidth="200.0" textFill="RED"/>
-                <Label fx:id="password1Message" layoutX="170.0" layoutY="300.0" prefWidth="200.0" textFill="RED"/>
-                <Label fx:id="password2Message" layoutX="170.0" layoutY="355.0" prefWidth="200.0" textFill="RED"/>
-                <PasswordField fx:id="password1Field" layoutX="169.0" layoutY="275.0" prefWidth="200.0"/>
-                <PasswordField fx:id="password2Field" layoutX="169.0" layoutY="330.0" prefWidth="200.0"/>
-                <Hyperlink fx:id="switchToLogin" layoutX="142.0" layoutY="442.0" onAction="#switchToLogin"
-                           text="Quay lại đăng nhập" textFill="RED"/>
+                <Label fx:id="emailMessage" layoutX="170.0" layoutY="135.0" prefWidth="200.0" textFill="RED" />
+                <Label fx:id="phoneMessage" layoutX="170.0" layoutY="190.0" prefWidth="200.0" textFill="RED" />
+                <Label fx:id="userNameMessage" layoutX="170.0" layoutY="245.0" prefWidth="200.0" textFill="RED" />
+                <Label fx:id="password1Message" layoutX="170.0" layoutY="300.0" prefWidth="200.0" textFill="RED" />
+                <Label fx:id="password2Message" layoutX="170.0" layoutY="355.0" prefWidth="200.0" textFill="RED" />
+                <PasswordField fx:id="password1Field" layoutX="169.0" layoutY="275.0" prefWidth="200.0" />
+                <PasswordField fx:id="password2Field" layoutX="169.0" layoutY="330.0" prefWidth="200.0" />
+                <Hyperlink fx:id="switchToLogin" layoutX="142.0" layoutY="442.0" onAction="#switchToLogin" text="Quay lại đăng nhập" textFill="RED" />
             </children>
         </Pane>
     </center>
