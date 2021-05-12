@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login">
+    <center>
+        <Pane prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="124.0" layoutY="83.0" text="ĐĂNG NHẬP" textFill="#ff0000cf">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="33.0" layoutY="187.0" text="Tên đăng nhập :">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="71.0" layoutY="255.0" text="Mật khẩu :">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="userNameField" layoutX="161.0" layoutY="185.0" prefWidth="200.0" />
+                <PasswordField fx:id="passwordField" layoutX="161.0" layoutY="253.0" prefWidth="200.0" />
+                <Button fx:id="signInBtn" layoutX="140.0" layoutY="347.0" mnemonicParsing="false" onMouseClicked="#signIn" prefHeight="29.0" prefWidth="102.0" text="ĐĂNG NHẬP" textFill="RED">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="userNameMessage" layoutX="161.0" layoutY="210.0" prefHeight="17.0" prefWidth="200.0" textFill="RED" />
+                <Label fx:id="passwordMessage" layoutX="161.0" layoutY="278.0" prefHeight="17.0" prefWidth="200.0" textFill="RED" />
+            <Hyperlink fx:id="switchToSignUp" layoutX="130.0" layoutY="384.0" onAction="#switchToSignUp" text="Chưa có tài khoản ?">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Hyperlink>
+            </children>
+        </Pane>
+    </center>
+    <left>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="image1" fitHeight="500.0" fitWidth="200.0" opacity="0.85">
+                    <Image url="@../../image/img-login.jpg" />
+                </ImageView>
+            </children>
+        </Pane>
+    </left>
+</BorderPane>
