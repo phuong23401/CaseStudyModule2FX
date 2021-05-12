@@ -113,12 +113,14 @@ public class MenuManager implements Initializable {
 
     private void loadDataKind() {
         ObservableList<String> kindList = FXCollections.observableArrayList();
-        String kind1 = "Sách giáo khoa";
-        String kind2 = "Sách tham khảo";
-        String kind3 = "Truyện tranh";
-        String kind4 = "Tiểu thuyết";
+        String kind1 = "Sách tham khảo";
+        String kind2 = "Truyện tranh";
+        String kind3 = "Tiểu thuyết";
+        String kind4 = "Truyện dài";
+        String kind5 = "Truyện ngắn";
+        String kind6 = "Tản văn";
 
-        kindList.addAll(kind1, kind2, kind3, kind4);
+        kindList.addAll(kind1, kind2, kind3, kind4, kind5, kind6);
         inputKind.getItems().addAll(kindList);
     }
 
@@ -150,11 +152,21 @@ public class MenuManager implements Initializable {
         image3.setImage(image);
 
         bookList = FXCollections.observableArrayList(
-                new Book(1, "Tiếng Việt 1", "Sách giáo khoa", 30000, 10, "Mới"),
-                new Book(2, "Tiếng Việt 2", "Sách giáo khoa", 35000, 10, "Mới"),
-                new Book(3, "Toán 1", "Sách giáo khoa", 40000, 10, "Mới"),
-                new Book(4, "Toán 2", "Sách giáo khoa", 40000, 10, "Mới"),
-                new Book(5, "Doraemon", "Truyện tranh", 45000, 10, "Mới")
+                new Book(1, "Kiếp Nào Ta Cũng Tìm Thấy Nhau", "Tiểu thuyết", 51900, 10, "Mới"),
+                new Book(2, "Nếu Biết Trăm Năm Là Hữu Hạn", "Truyện ngắn", 151000, 10, "Mới"),
+                new Book(3, "Nhà", "Truyện ngắn", 85900, 10, "Mới"),
+                new Book(4, "Nhật Ký Biết Ơn", "Tản văn", 56700, 10, "Mới"),
+                new Book(5, "Có Một Ngày, Bố Mẹ Sẽ Già Đi", "Tản văn", 60500, 10, "Mới"),
+                new Book(6, "Đời Có Mấy Tý, Sao Phải Nghĩ", "Truyện ngắn", 63000, 10, "Mới"),
+                new Book(7, "Đừng Làm Con Chim Lạc Đàn", "Truyện ngắn", 73800, 10, "Mới"),
+                new Book(8, "Cảm Giác Được Yêu", "Truyện ngắn", 60500, 10, "Mới"),
+                new Book(9, "Người Không Mặt", "Tản văn", 60500, 10, "Mới"),
+                new Book(10, "Danh Tác Việt Nam", "Tản văn", 60100, 10, "Mới"),
+                new Book(11, "Trại Hoa Vàng", "Truyện dài", 61300, 10, "Mới"),
+                new Book(12, "Tôi Là Bêtô", "Truyện dài", 49100, 10, "Mới"),
+                new Book(13, "Còn Chút Gì Để Nhớ", "Truyện dài", 45400, 10, "Mới"),
+                new Book(14, "Tiệm Đồ Cổ Á Xá", "Truyện tranh", 57600, 10, "Mới"),
+                new Book(15, "Doraemon", "Truyện tranh", 40000, 10, "Mới")
         );
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -249,7 +261,7 @@ public class MenuManager implements Initializable {
         if (mouseEvent.getClickCount() > 1) {
             Book book = tableView.getSelectionModel().getSelectedItem();
             if (book != null) {
-//                inputId.setText(String.valueOf(book.getId()));
+                inputId.setText(String.valueOf(book.getId()));
                 inputName.setText(book.getName());
                 inputKind.setValue(book.getKindOfBook());
                 inputPrice.setText(String.valueOf(book.getPrice()));
